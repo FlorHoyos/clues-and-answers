@@ -54,36 +54,40 @@
         }
     </style>
     <script>
-    function processAnswer(clueNum, answer) {
-        var userResp = prompt("Clue " + clueNum + ": " + "\nEnter your answer:");
-        return userResp && userResp.toLowerCase() == answer.toLowerCase();
-    }
-
-    function showResult() {
-        alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)");
-    }
-
-    function processClues() {
-        var cluesResponse = [
-            { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
-            { clue: "Our first kiss happened outside a restaurant. What is the name of the restaurant?", answer: "southlake" },
-            { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco coichibanya" },
-            { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
-        ];
-
-        for (var i = 0; i < cluesResponse.length; i++) {
-            if (processAnswer(i + 1, cluesResponse[i].answer)) {
-                alert("Perfecto! We will continue. Ready??");
-            } else {
-                alert("So close, but not quite.");
-                return;
-            }
+        function processAnswer(clueNum, answer) {
+            var userResp = prompt("Clue " + clueNum + ": " + answer + "\nEnter your answer:").toLowerCase();
+            return userResp == answer.toLowerCase();
         }
 
-        showResult();
-    }
-</script>
-</head>
+        function showResult() {
+            alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)");
+        }
+
+        function processClues() {
+            // Array of clues and answers
+            var cluesResponse = [
+                { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
+                { clue: "Our first kiss happened outside a restaurant. What is the name of the restaurant?", answer: "southlake" },
+                { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco coichibanya" },
+                { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
+            ];
+
+            // Process clues
+            for (var i = 0; i < cluesResponse.length; i++) {
+                if (processAnswer(i + 1, cluesResponse[i].answer)) {
+                    alert("Perfecto! We will continue. Ready??");
+                } else {
+                    alert("So close, but not quite.");
+                    // If the user fails, you can choose to handle it as you wish
+                    // For example, break the loop and end the game
+                    return;
+                }
+            }
+
+            // If all clues are answered correctly, show the final message
+            showResult();
+        }
+    </script></head>
 <body>
 
     <h1>Valentine's Day clues</h1>

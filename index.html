@@ -6,14 +6,15 @@
     <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #e60073; /* Gliterry Pink */
-        color: #4a4a4a;
+        background-color: #ff007f; /* Fuchsia */
+        background-image: url('https://www.transparenttextures.com/patterns/always-grey.png'); /* Glitter pattern */
+        color: #fff; /* White text for better visibility */
         margin: 20px;
         text-align: center;
     }
 
     h1, h2 {
-        color: #ff3864;
+        color: #fff;
     }
 
     ol {
@@ -32,28 +33,28 @@
     hr {
         margin-top: 30px;
         margin-bottom: 30px;
-        border: 1px solid #ff3864;
+        border: 1px solid #fff; /* White border */
     }
 
     strong {
-        color: #ff3864;
+        color: #fff;
     }
 
     button {
-        background-color: #ff3864;
-        color: #fff;
+        background-color: #fff; /* White button background */
+        color: #ff007f; /* Fuchsia text */
         padding: 10px 20px;
         font-size: 16px;
         border: none;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     button:hover {
-        background-color: #d52c58;
+        background-color: #d52c58; /* Lighter fuchsia on hover */
+        color: #fff; /* White text on hover */
     }
-</style>
-    <script>
+</style>    <script>
     const startBtn = document.getElementById('startBtn');
 
     function processClues() {

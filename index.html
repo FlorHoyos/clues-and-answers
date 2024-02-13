@@ -4,75 +4,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Valentine's Day clues</title>
     <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f7f0f4;
-        color: #4a4a4a;
-        margin: 20px;
-        text-align: center;
-    }
-
-    h1, h2 {
-        color: #ff3864;
-    }
-
-    ol {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    hr {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border: 1px solid #ff3864;
-    }
-
-    strong {
-        color: #ff3864;
-    }
-
-    button {
-        background-color: #ff3864;
-        color: #fff;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    button:hover {
-        background-color: #d52c58;
-    }
-
-    /* Floating 3D hearts animation */
-    .heart {
-        position: fixed;
-        background-color: #ff3864;
-        width: 10px;
-        height: 10px;
-        transform: rotate(-45deg);
-        animation: floatHeart 3s infinite;
-    }
-
-    @keyframes floatHeart {
-        0%, 100% {
-            transform: translateY(0) rotate(-45deg);
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fuchsia; /* Fusia background */
+            color: #4a4a4a;
+            margin: 20px;
+            text-align: center;
         }
-        50% {
-            transform: translateY(-20px) rotate(-45deg);
+
+        h1, h2 {
+            color: #ff3864;
         }
-    }
-</style>
-        <script>
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #ff3864;
+        }
+
+        strong {
+            color: #ff3864;
+        }
+
+        button {
+            background-color: #ff3864;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d52c58;
+        }
+
+        /* Heart rain animation */
+        .heart {
+            position: absolute;
+            background-color: #ff3864;
+            width: 10px;
+            height: 10px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: fall 2s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <script>
     const startBtn = document.getElementById('startBtn');
 
     function processClues() {

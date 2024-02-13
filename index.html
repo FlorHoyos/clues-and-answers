@@ -65,14 +65,15 @@
         ];
 
         for (let i = 0; i < cluesResponse.length; i++) {
-            const answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`).toLowerCase();
+            let answer;
+            do {
+                answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`).toLowerCase();
+                if (answer !== cluesResponse[i].answer.toLowerCase()) {
+                    alert("Incorrect answer. Try again.");
+                }
+            } while (answer !== cluesResponse[i].answer.toLowerCase());
 
-            if (answer === cluesResponse[i].answer.toLowerCase()) {
-                alert("Perfecto! We will continue. Ready??");
-            } else {
-                alert("So close, but not quite.");
-                return;
-            }
+            alert("Perfecto! We will continue. Ready??");
         }
 
         alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)");

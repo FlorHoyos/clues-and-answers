@@ -55,33 +55,36 @@
         }
     </style>
     <script>
-    const startButton = document.getElementById('startButton');
+    document.addEventListener('DOMContentLoaded', function () {
+        const startButton = document.getElementById('startButton');
 
-    function processClues() {
-        const cluesResponse = [
-            { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
-            { clue: "Our first kiss happened outside a restaurant. In what city?", answer: "southlake" },
-            { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco ichibanya" },
-            { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
-        ];
+        function processClues() {
+            const cluesResponse = [
+                { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
+                { clue: "Our first kiss happened outside a restaurant. In what city?", answer: "southlake" },
+                { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco ichibanya" },
+                { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
+            ];
 
-        for (let i = 0; i < cluesResponse.length; i++) {
-            let answer;
-            do {
-                answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`);
-                if (answer !== cluesResponse[i].answer.toLowerCase()) {
-                    alert("Incorrect answer. Try again.");
-                }
-            } while (answer !== cluesResponse[i].answer.toLowerCase());
+            for (let i = 0; i < cluesResponse.length; i++) {
+                let answer;
+                do {
+                    answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`);
+                    if (answer !== cluesResponse[i].answer.toLowerCase()) {
+                        alert("Incorrect answer. Try again.");
+                    }
+                } while (answer !== cluesResponse[i].answer.toLowerCase());
 
-            alert("Perfecto! We will continue. Ready??");
+                alert("Perfecto! We will continue. Ready??");
+            }
+
+            alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)\n I do think you are amazing and a great person!\nDont ever change, only keep growing.\nI am glad we met, I hope we can continue to get to explore more of this.\nThank you again for being wonderful!!!");
         }
 
-        alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)\n I do think you are amazing and a great person!\nDont ever change, only keep growing.\nI am glad we met, I hope we can continue to get to explore more of this.\nThank you again for being wonderful!!!");
-    }
-
-    startButton.addEventListener('click', processClues);
-</script></head>
+        startButton.addEventListener('click', processClues);
+    });
+</script>
+    </head>
 <body>
 
     <h1>Valentine's Day Questions</h1>

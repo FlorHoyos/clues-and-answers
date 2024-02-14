@@ -70,10 +70,10 @@
                 let answer;
                 do {
                     answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`);
-                    if (answer !== cluesResponse[i].answer.toLowerCase()) {
+                    if (answer.toLowerCase() !== cluesResponse[i].answer.toLowerCase()) {
                         alert("Incorrect answer. Try again.");
                     }
-                } while (answer !== cluesResponse[i].answer.toLowerCase());
+                } while (answer.toLowerCase() !== cluesResponse[i].answer.toLowerCase());
 
                 alert("Perfecto! We will continue. Ready??");
             }

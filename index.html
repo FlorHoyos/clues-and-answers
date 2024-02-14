@@ -74,10 +74,10 @@
                         // User clicked cancel, stop the process
                         return;
                     }
-                    if (answer.toLowerCase() !== cluesResponse[i].answer.toLowerCase()) {
+                    if (answer.trim().toLowerCase() !== cluesResponse[i].answer.toLowerCase()) {
                         alert("Incorrect answer. Try again.");
                     }
-                } while (answer.toLowerCase() !== cluesResponse[i].answer.toLowerCase());
+                } while (answer.trim().toLowerCase() !== cluesResponse[i].answer.toLowerCase());
 
                 alert("Perfecto! We will continue. Ready??");
             }

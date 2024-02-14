@@ -1,20 +1,19 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Valentine's Day clues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Clues</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(45deg, #ff99cc, #ff3864); /* Pink gradient background */
+            background-color: #ff99cc; /* Light pink background */
             color: #4a4a4a;
             margin: 20px;
             text-align: center;
         }
 
         h1, h2 {
-            color: #fff; /* White text for headings */
+            color: #ff3864; /* Dark pink for headings */
         }
 
         ol {
@@ -33,15 +32,15 @@
         hr {
             margin-top: 30px;
             margin-bottom: 30px;
-            border: 1px solid #fff; /* White border */
+            border: 1px solid #ff3864;
         }
 
         strong {
-            color: #fff;
+            color: #ff3864;
         }
 
         button {
-            background: linear-gradient(45deg, #ff3864, #d52c58); /* Pink gradient button */
+            background-color: #ff3864;
             color: #fff;
             padding: 10px 20px;
             font-size: 16px;
@@ -51,52 +50,24 @@
         }
 
         button:hover {
-            background: linear-gradient(45deg, #d52c58, #ff3864); /* Slightly darker pink gradient on hover */
+            background-color: #d52c58;
         }
     </style>
-      <script>
-    const startBtn = document.getElementById('startBtn');
-
-    function processClues() {
-        const cluesResponse = [
-            { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
-            { clue: "Our first kiss happened outside a restaurant. In what city?", answer: "southlake" },
-            { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco ichibanya" },
-            { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
-        ];
-
-        for (let i = 0; i < cluesResponse.length; i++) {
-            let answer;
-            do {
-                answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`).toLowerCase();
-                if (answer !== cluesResponse[i].answer.toLowerCase()) {
-                    alert("Incorrect answer. Try again.");
-                }
-            } while (answer !== cluesResponse[i].answer.toLowerCase());
-
-            alert("Perfecto! We will continue. Ready??");
-        }
-
-        alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)");
-    }
-
-    startBtn.addEventListener('click', processClues);
-</script>
 </head>
 <body>
 
-    <h1>Valentine's Day questions</h1>
+    <h1>Valentine's Day Clues</h1>
 
     <p>Just something small I wanted to make for you!</p>
 
-    <h2>Las preguntas</h2>
+    <h2>Clues and Answers</h2>
 
-    <button id="startBtn">Start</button>
+    <button id="startButton">Start Heart Rain</button>
 
     <h2>Instructions</h2>
 
     <ul>
-        <li>Respond to each question by entering the correct answer.</li>
+        <li>Respond to each clue by entering the correct answer.</li>
         <li>You can enter answers in either uppercase or lowercase.</li>
         <li>If you get stuck, no te apures, this is just for fun.</li>
     </ul>

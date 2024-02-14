@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,14 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ff99cc; /* Light pink background */
+            background: linear-gradient(45deg, #ff99cc, #ff3864); /* Pink gradient background */
             color: #4a4a4a;
             margin: 20px;
             text-align: center;
         }
 
         h1, h2 {
-            color: #ff3864; /* Dark pink for headings */
+            color: #fff; /* White text for headings */
         }
 
         ol {
@@ -32,15 +33,15 @@
         hr {
             margin-top: 30px;
             margin-bottom: 30px;
-            border: 1px solid #ff3864;
+            border: 1px solid #fff; /* White border */
         }
 
         strong {
-            color: #ff3864;
+            color: #fff;
         }
 
         button {
-            background-color: #ff3864;
+            background: linear-gradient(45deg, #ff3864, #d52c58); /* Pink gradient button */
             color: #fff;
             padding: 10px 20px;
             font-size: 16px;
@@ -50,7 +51,7 @@
         }
 
         button:hover {
-            background-color: #d52c58;
+            background: linear-gradient(45deg, #d52c58, #ff3864); /* Slightly darker pink gradient on hover */
         }
     </style>
       <script>
@@ -81,7 +82,8 @@
 
     startBtn.addEventListener('click', processClues);
 </script>
-    <body>
+</head>
+<body>
 
     <h1>Valentine's Day questions</h1>
 
@@ -89,7 +91,7 @@
 
     <h2>Las preguntas</h2>
 
-    <button onclick="processClues()">Start</button>
+    <button id="startBtn">Start</button>
 
     <h2>Instructions</h2>
 

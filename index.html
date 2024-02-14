@@ -55,16 +55,33 @@
         }
     </style>
     <script>
-        const startButton = document.getElementById('startButton');
+    const startButton = document.getElementById('startButton');
 
-        function processClues() {
-            // Your existing code for processing clues
-            alert("Button clicked!");
+    function processClues() {
+        const cluesResponse = [
+            { clue: "When we first connected, what was the name of the app?", answer: "hinge" },
+            { clue: "Our first kiss happened outside a restaurant. In what city?", answer: "southlake" },
+            { clue: "For our second date, we enjoyed Japanese food. Name the Japanese restaurant.", answer: "coco ichibanya" },
+            { clue: "I have a special word for you. What is the word I always call you?", answer: "crazy" }
+        ];
+
+        for (let i = 0; i < cluesResponse.length; i++) {
+            let answer;
+            do {
+                answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`);
+                if (answer !== cluesResponse[i].answer.toLowerCase()) {
+                    alert("Incorrect answer. Try again.");
+                }
+            } while (answer !== cluesResponse[i].answer.toLowerCase());
+
+            alert("Perfecto! We will continue. Ready??");
         }
 
-        startButton.addEventListener('click', processClues);
-    </script>
-</head>
+        alert("Congratulations! Felicidades Amor!\nHappy Valentine's Day! ❤️ Do you want to be mine forever? ;)");
+    }
+
+    startButton.addEventListener('click', processClues);
+</script></head>
 <body>
 
     <h1>Valentine's Day Clues</h1>

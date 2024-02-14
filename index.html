@@ -70,6 +70,10 @@
                 let answer;
                 do {
                     answer = prompt(`Clue ${i + 1}: ${cluesResponse[i].clue}\nEnter your answer:`);
+                    if (answer === null) {
+                        // User clicked cancel, stop the process
+                        return;
+                    }
                     if (answer.toLowerCase() !== cluesResponse[i].answer.toLowerCase()) {
                         alert("Incorrect answer. Try again.");
                     }
